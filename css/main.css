@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* 공통 CSS */
+#wrap{min-width: 1200px; /*overflow-x: hidden;*/}
+.inner{width: 1200px; margin: 0 auto; position: relative;}
+
+header{border-top: 5px solid #009132;}
+h1{display: flex; justify-content: center; padding: 30px 0 20px;}
+
+.gnb{display: flex; justify-content: space-between;}
+.gnb > li{position: relative;}
+.gnb > li > a{display: block; font-size: 20px; font-weight: 700; padding: 20px 50px; transition: all 0.5s;}
+.gnb > li:hover > a{color: #009132;}
+
+.gnb > li .depth2{width: 200px; position: absolute; top: 67px; left: 50%; transform: translateX(-50%); z-index: 9; background-color: #009132; padding: 20px 0 30px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); border-radius: 30px 0; display: none;}
+/* .gnb > li:hover .depth2{display: block;} */
+
+.gnb > li .depth2 li a{display: block; color: #fff; text-align: center; font-size: 16px; padding: 3px 0; transition: all 0.5s;}
+.gnb > li .depth2 li:hover a{color: #ffce32;}
+
+
+/*main-banner*/
+#main-banner {position: relative;}
+#main-banner h2{display: none;}
+#main-banner img{width: 100%;}
+
+#main-banner ul{box-shadow: 5px 5px 10px rgba(0,0,0,0.2); border-radius: 30px 0; overflow: hidden; position: absolute; left: 50%; bottom: -40px; display: flex;}
+#main-banner ul li a{display: block; padding: 30px 70px 28px 120px; font-size: 20px; font-weight: 700;}
+#main-banner ul li:nth-child(1) a{background: #ffce32 url(../img/icon_map.png) no-repeat 70px center;}
+#main-banner ul li:nth-child(2) a{background: #009132 url(../img/icon_franchise.png) no-repeat 70px center; color: #fff;}
+
+/*#menu*/
+#menu{padding: 150px 0;}
+#menu h2{font-size: 40px; font-weight: 900; padding: 10px 30px; background: url(../img/h2_bg.png) no-repeat;}
+#menu ul{display: flex;}
+#menu ul li{width: calc(100% / 3); text-align: center; transform: scale(0.9); transition: all 0.5s; position: relative;}
+#menu ul li img{width: 100%;}
+#menu ul li:hover{transform: scale(1);}
+#menu ul li dt{font-size: 20px; font-weight: 700; padding: 0 0 10px;}
+#menu ul li dd{color: #999; font-size: 18px;}
+#menu ul li a{display: block; width: 98px; height: 98px; background: url(../img/btn_more.png) no-repeat center; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: transparent; font-size: 0; opacity: 0; transition: all 0.5s;}
+#menu ul li:hover a{opacity: 1;}
+
+/*#franchise*/
+#franchise{padding: 150px 0; background: url(../img/franchise_bg.jpg) no-repeat center / cover fixed; text-align: center; color: #fff;}
+#franchise h2{font-size: 40px; font-weight: 900;}
+#franchise p{font-size: 16px; padding: 30px 0; opacity: 0.7;}
+#franchise .btn{display: inline-block; border: 2px solid #fff; padding: 10px 50px; color: #fff; border-radius: 30px; font-size: 700; transition: all 0.5s;}
+#franchise .btn:hover{background-color: #fff; color: #000;}
+
+
+/*#guide*/
+#guide{padding: 150px 0; background: url(../img/bg_pattern.gif);}
+#guide .inner{display: flex; justify-content: space-between;}
+
+#guide h3{color: #fff; font-size: 25px; margin-bottom: 30px;}
+#guide .btn{display: inline-block; border: 2px solid #fff; padding: 10px 50px; color: #fff; font-weight: 700; border-radius: 30px; transition: all 0.5s;}
+#guide .btn:hover{background-color: #fff; color: #000;}
+
+#guide .method{width: 400px; background: #01a5e2 url(../img/method.png) no-repeat 150px 100px; border-radius: 30px 0 30px 30px; padding: 50px;}
+#guide .history{width: calc(100% - 450px); background-color: #ff8300; border-radius: 30px 0 30px 0; overflow: hidden; display: flex;}
+#guide .history div{padding: 50px;}
+
+#guide .inner > div{box-shadow: 5px 5px 10px rgba(0,0,0,0.2); transition: all 0.5s;}
+#guide .inner > div:hover{transform: translate(5px, 5px);}
+
+/*footer*/
+footer{background-color: #333; padding: 100px 0; color: #fff;}
+footer .f-link{display: flex; gap: 20px;}
+footer .f-link li a{color: #999; transition: all 0.5s;}
+footer .f-link li:hover a{color: #009132;}
+
+footer .f-bottom{display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 30px; padding-top: 30px;}
+footer address{opacity: 0.3;}
+footer address span{display: inline-block; margin-right: 20px;}
+footer .copy{opacity: 0.1; margin-top: 5px;}
+
+footer .sns{display: flex; gap: 10px;}
+footer .sns li a{opacity: 0.5; transition: all 0.5s;}
+footer .sns li:hover a{opacity: 1;}
+
+.go-top{display: block; width: 80px; height: 80px; border-radius: 50%; background: rgba(0,0,0,0.2) url(../img/gotop.png) no-repeat center; font-size: 0; color: transparent; position: fixed; right: 50px; bottom: 50px;}
